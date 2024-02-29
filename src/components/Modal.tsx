@@ -1,20 +1,57 @@
-import { useState } from "react";
 
+interface Props {
+  modalState: 'victory' | 'defeat',
+  hideModal(): void,
+  onKeepPlaying(): void, 
+  onNewCategorie(): void,
+  onQuitGame(): void,  
+}
 
+export default function Modal({modalState, onKeepPlaying, onNewCategorie, onQuitGame, hideModal}: Props) {
 
-export default function Modal() {
+  function onKeepPlayingButton() {
+    hideModal()
+    onKeepPlaying()
+  }
+  function onNewCategorieButton() {
+    hideModal()
+    onNewCategorie()
+  }
+  function onQuitGameButton() {
+    hideModal()
+    onQuitGame()
+  }
 
   return (
     <>
-    <div className="absolute w-full h-full ">
+    <div className="absolute w-full h-full">
       <div className="w-full h-full bg-black bg-opacity-30 flex justify-center items-center">
-        <div className={`w-1/3 h-1/2
-          bg-white relative p-10
-          `} >
-              fechar
-            <span>
-              Sint do nisi sit culpa magna aliqua nostrud deserunt dolor consequat laboris adipisicing ipsum. Proident dolore occaecat ut elit nulla sit exercitation veniam consectetur enim nostrud Lorem incididunt. Quis ad esse ex velit qui do esse esse cupidatat pariatur occaecat. Cupidatat excepteur ea ex consequat. Mollit qui reprehenderit est veniam qui. Excepteur voluptate officia aute cillum veniam tempor deserunt officia.
-            </span>
+        <div className={`
+            flex flex-col justify-center items-center
+            w-1/3 h-1/2 relative
+          bg-white p-10 rounded-lg
+          `} >            
+            <h1 className="
+              text-5xl font-bold bg-blue-200 px-10 py-5 rounded-xl
+              absolute -top-12 right-24 
+            ">{modalState}</h1>
+            <div className="flex flex-col gap-5">
+              <button 
+                onClick={onKeepPlayingButton}
+                className="bg-blue-500 py-5 px-20 font-bold text-xl text-white rounded-2xl">
+                  Continuar
+                </button>
+              <button 
+                onClick={onNewCategorieButton}
+                className="bg-blue-500 py-5 px-20 font-bold text-xl text-white rounded-2xl">
+                  Nova categoria
+                </button>
+              <button 
+                onClick={onQuitGameButton}
+                className="bg-blue-500 py-5 px-20 font-bold text-xl text-white rounded-2xl">
+                  Sair do jogo
+                </button>
+            </div>
         </div>
       </div>
     </div>

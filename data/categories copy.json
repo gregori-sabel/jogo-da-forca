@@ -1,0 +1,47 @@
+[
+    {
+        "name": "Escola",
+        "words": [
+            "Matemática",
+            "História",
+            "Geografia",
+            "Ciências",
+            "Professor",
+            "Aluno",
+            "Lousa",
+            "Caneta",
+            "Livro",
+            "Exercício"            
+        ]
+    },
+    {
+        "name": "Comida",
+        "words": [
+            "Pizza",
+            "Hambúrguer",
+            "Sushi",
+            "Sorvete",
+            "Chocolate",
+            "Salada",
+            "Frutas",
+            "Macarrão",
+            "Sanduíche",
+            "Batata"           
+        ]
+    },
+    {
+        "name": "Animais",
+        "words": [
+            "Leão",
+            "Elefante",
+            "Girafa",
+            "Cachorro",
+            "Gato",
+            "Peixe",
+            "Pássaro",
+            "Tartaruga",
+            "Coelho",
+            "Zebra"          
+        ]
+    }
+]
