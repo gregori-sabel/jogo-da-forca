@@ -90,10 +90,12 @@ function Game({secretWord, onKeepPlaying, onNewCategorie, onQuitGame}: Props) {
     <div className='w-full h-full flex justify-center items-center'>
       <LifeBar life={lifeBar}/>
       <div className='flex flex-col justify-center items-center'>
-        <div className='flex gap-4 mb-40'>  
-          <SecretWord secretWordLettersObjects={secretWordLettersObjects}/>      
-        </div>
-        <div className='grid grid-cols-9 gap-4'>          
+        <SecretWord secretWordLettersObjects={secretWordLettersObjects}/>   
+        <div className={`grid gap-4 
+          grid-cols-4
+          md:grid-cols-9
+          
+        `}>          
           {letters.map( (letter) => (
             <Letter letter={letter} playLetter={playLetter} />
           ))}
