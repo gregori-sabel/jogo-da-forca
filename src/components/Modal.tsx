@@ -33,8 +33,8 @@ export default function Modal({modalState, onKeepPlaying, onNewCategorie, onQuit
           `} >            
             <h1 className="
               text-5xl font-bold bg-blue-200 px-10 py-5 rounded-xl
-              absolute -top-12 right-24 
-            ">{modalState}</h1>
+              -top-12 absolute
+            ">{modalState}</h1> 
             <div className="flex flex-col gap-5">
               <button 
                 onClick={onKeepPlayingButton}
