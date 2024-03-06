@@ -20,8 +20,8 @@ function Letter({ letter, playLetter }: Props) {
             <button 
                 onClick={() => onClickLetter()}
                 className={`
-                font-bold p-5 px-10 rounded-lg text-white text-lg  
-                ${isLetterPressed ? 'bg-blue-200 cursor-not-allowed' : 'bg-blue-500 hover:bg-blue-300 transition'}
+                font-bold p-5 px-10 rounded-lg text-blue-500 text-lg  
+                ${isLetterPressed ? 'bg-blue-400 cursor-not-allowed' : 'bg-white hover:bg-gray-200 transition'}
                 `}
             >{letter}</button>
         </>

@@ -1,3 +1,4 @@
+import { BiHeart } from "react-icons/bi";
 
 interface Props {
     life: number
@@ -9,10 +10,14 @@ function LifeBar({life}: Props) {life
     return (
         <>
         <div className="absolute top-10 right-10">
-            <div className="w-40 h-8 rounded-full border-spacing-2 border-black border-4 overflow-hidden">
+            <BiHeart />  
+            <div className="w-40 h-8 rounded-full border-spacing-2 border-white border-2 overflow-hidden">
                 <div className={`h-full bg-red-500 rounded-full
                     ${lifeSize[life]}
                 `}></div>
+                <BiHeart />                
+                <BiHeart />                
+                <BiHeart />                
 
             </div>
         </div>

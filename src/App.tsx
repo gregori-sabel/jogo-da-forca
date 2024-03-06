@@ -22,12 +22,15 @@ function App() {
     const wordList = jsonData.filter( categorie => categorie.name == chooseCategorie)[0].words    
     const randomIndex = Math.floor(Math.random() * wordList.length)
     setWordFromCategorie(wordList[randomIndex])
+    console.log(wordList[randomIndex])
 
     setGameState('game')
   }
 
   function onKeepPlaying() {
     onChooseCategorie(categorie)
+    setGameState('categorie')
+    setGameState('game')
   }
 
   function onNewCategorie() {
